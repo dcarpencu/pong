@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joc PONG</title>
+    <style>
+      body {
+        background-color: darkslategray;
+      }
+      #gameCanvas {
+        background-color: purple;
+        width: 740px;
+        height: 460px;
+        margin: auto;
+        align: center;
+      }
+      #scoreboard-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 300px;
+        border: 2px solid black;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: lightgray;
+      }
+
+      #scoreboard {
+        text-align: center;
+        font-family: "Courier New", monospace;
+        color: black;
+        margin-top: 20px;
+      }
+
+      #scores {
+        font-size: 500%;
+        padding: 0;
+        margin: 0;
+        color: black;
+      }
+
+      #title {
+        background-color: gray;
+        color: black;
+      }
+    </style>
+  </head>
+  <body onload="setup();">
+    <div id="gameCanvas"></div>
+    <script src="./three.min.js"></script>
+    <script src="./keyboard.js"></script>
+    <script src="./game.js"></script>
+    <div id="scoreboard-container">
+      <div id="scoreboard">
+        <h1 id="scores">0-0</h1>
+        <h1 id="title">PONG!</h1>
+        <h2 id="winnerBoard">Primul care inscrie 5 puncte castiga!</h2>
+        <h3>
+          sageata stanga - miscare stanga <br />sageata dreapta - miscare
+          dreapta
+        </h3>
+      </div>
+    </div>
+  </body>
+</html>
